@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEST360 | VR Real Estate Platform</title>
+  <meta name="description" content="NEST360 is a white-label VR platform for immersive real estate visits and housing personalization. Coming soon.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bg-animated {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      animation: gradientShift 10s ease infinite;
+      background-size: 400% 400%;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .floating-img {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .moving-bg {
+      background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+      animation: pan 60s linear infinite;
+    }
+
+    @keyframes pan {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+  </style>
+</head>
+<body class="bg-animated text-white min-h-screen flex items-center justify-center px-6 relative">
+
+  <div class="moving-bg"></div>
+
+  <div class="max-w-2xl text-center fade-in z-10 p-6 bg-black bg-opacity-40 backdrop-blur-lg rounded-xl shadow-xl">
+    <img src="logo-nest360.png" alt="NEST360 Logo" class="mx-auto w-24 sm:w-32 mb-6 floating-img">
+
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-blue-300">NEST360</h1>
+    <p class="text-lg sm:text-xl text-gray-200 mb-6">A cutting-edge white-label VR platform for immersive real estate experiences and housing personalization.</p>
+
+    <p class="text-yellow-400 font-semibold text-lg mb-4 animate-pulse">🚧 Platform Under Construction</p>
+
+    <a href="https://www.youtube.com/watch?v=FXZ1dWy2Uec" target="_blank"
+       class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-5 rounded-lg transition-all duration-300">
+      🎥 Watch Demo
+    </a>
+
+    <div class="mt-8 text-left text-sm text-gray-300 space-y-2">
+      <p><strong>👩‍💼 CEO:</strong> Ameni Tombari – Software Engineer</p>
+      <p><strong>🧠 CTO:</strong> Mariem Azaiez – Software Engineer</p>
+      <p><strong>⚙️ COO:</strong> Cyrine Chebbi – Software Engineer</p>
+    </div>
+
+    <p class="mt-4 text-xs text-gray-400">Contact: <a href="mailto:ameni.tombari1999@gmail.com" class="underline">ameni.tombari1999@gmail.com</a></p>
+    <p class="text-xs text-gray-400">Site Web: <em>Coming Soon</em></p>
+  </div>
+</body>
+</html>
